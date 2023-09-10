@@ -1,12 +1,8 @@
 import React from "react";
 import { UilAtom } from "@iconscout/react-unicons";
 import { HyperLink, ScrollToTop } from "./index";
-import { FooterStyle } from "../styles/Styles";
+import { FooterStyle, InnerFooterStyle } from "../styles/Styles";
 import { Colors } from "../styles/Colors";
-
-// interface FooterProps {
-
-// }
 
 export const Footer = () => {
   return (
@@ -17,14 +13,7 @@ export const Footer = () => {
         >
           Created by LiadJ9
         </p>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            justifyItems: "center",
-          }}
-        >
+        <div style={InnerFooterStyle}>
           <UilAtom size={"35"} color={Colors.Cream} />
           <HyperLink
             style={{ marginTop: 5 }}

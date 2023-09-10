@@ -1,18 +1,10 @@
 import React from "react";
-import { Colors } from "../styles/Colors";
+import { Fo_o_Fo_ContainerStyle, Fo_o_Fo_ErrorStyle } from "../styles/Styles";
 
 export const NoPage = () => (
   <>
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        backgroundColor: Colors.LightCream,
-        minHeight: "88vh",
-      }}
-    >
-      <p style={{ fontFamily: "Poppins", marginBottom: "10vh" }}>
+    <div style={Fo_o_Fo_ContainerStyle}>
+      <p style={Fo_o_Fo_ErrorStyle}>
         404 Error: Seems like something went wrong
       </p>
       <img

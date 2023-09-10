@@ -16,6 +16,8 @@ export const BlogList = ({ blogs, style }: BlogProps) => {
             <BlogItem
               title={blogs[index].title}
               content={blogs[index].content}
+              content2={blogs[index].content2}
+              content3={blogs[index].content3}
               img={blogs[index].img}
               timestamp={blogs[index].timestamp}
             />

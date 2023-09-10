@@ -1,63 +1,77 @@
 import React from "react";
 import { animated, useSpring } from "@react-spring/web";
 import { Colors } from "../../styles/Colors";
+import {
+  InnerBlogpostContainerStyle,
+  OuterBlogpostContainerStyle,
+  ParagraphStyle,
+} from "../../styles/Styles";
 
 interface BlogItemProps {
   title: string;
   content: string;
-  img: string;
+  content2?: string;
+  content3?: string;
+  img?: string;
   timestamp: string;
 }
 
-export const BlogItem = ({ title, content, img, timestamp }: BlogItemProps) => {
+export const BlogItem = ({
+  title,
+  content,
+  content2,
+  content3,
+  img,
+  timestamp,
+}: BlogItemProps) => {
   const titleSpring = useSpring({
-    from: { x: 100 },
-    to: { x: 0 },
+    from: { x: -50, opacity: 0 },
+    to: { x: 0, opacity: 1 },
   });
+
+  const [imageSpring, imageapi] = useSpring(() => ({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  }));
+  imageapi.start({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  });
+
   return (
-    <div
-      style={{
-        display: "felx",
-        maxWidth: "110vh",
-        boxShadow: `5px 7px ${Colors.SilkBrown}`,
-        borderRadius: "8px",
-        marginBottom: "5vh",
-        backgroundColor: Colors.SilkCaramel,
-      }}
-    >
-      <animated.h1
-        style={{ marginLeft: "2vh", fontFamily: "Poppins", ...titleSpring }}
-      >
-        {title}
-      </animated.h1>
-      <p style={{ marginLeft: "2vh" }}>{`posted on: ${timestamp}`}</p>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          maxHeight: "60vh",
-        }}
-      >
-        <img
+    <div style={OuterBlogpostContainerStyle}>
+      <div style={InnerBlogpostContainerStyle}>
+        <animated.h1
           style={{
-            maxWidth: "700px",
-            marginLeft: "1vh",
-            marginTop: "1vh",
-            borderRadius: "10px",
+            fontFamily: "Poppins",
+            color: Colors.DarkBrown,
+            ...titleSpring,
           }}
-          src={img}
-        />
+        >
+          {title}
+        </animated.h1>
+        <p
+          style={{
+            fontFamily: "Poppins",
+            fontWeight: "300",
+            color: Colors.DarkBrown,
+          }}
+        >{`posted on: ${timestamp}`}</p>
+        {img && (
+          <animated.img
+            style={{
+              borderRadius: "10px",
+              maxWidth: "90%",
+              height: "auto",
+              ...imageSpring,
+            }}
+            src={img}
+          />
+        )}
+        <p style={ParagraphStyle}>{content}</p>
+        {content2 && <p style={ParagraphStyle}>{content2}</p>}
+        {content3 && <p style={ParagraphStyle}>{content3}</p>}
       </div>
-      <p
-        style={{
-          maxWidth: "90%",
-          marginLeft: "2vh",
-          textAlign: "left",
-          fontFamily: "Poppins",
-        }}
-      >
-        {content}
-      </p>
     </div>
   );
 };

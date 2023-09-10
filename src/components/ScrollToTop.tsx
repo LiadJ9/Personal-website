@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 import { UilAngleUp } from "@iconscout/react-unicons";
 import { Colors } from "../styles/Colors";
 
@@ -7,11 +8,44 @@ interface ScrollProps {
 }
 
 export const ScrollToTop = ({ style }: ScrollProps) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [scrollButton, scrollapi] = useSpring(() => ({
+    from: { opacity: 0 },
+  }));
+
+  const handleAppear = () => {
+    scrollapi.start({
+      from: {
+        opacity: 0,
+      },
+      to: {
+        opacity: 1,
+      },
+    });
+  };
+
+  const handleDisappear = () => {
+    scrollapi.start({
+      from: {
+        opacity: 1,
+      },
+      to: {
+        opacity: 0,
+      },
+    });
+  };
+
+  useEffect(() => {
+    if (isVisible) {
+      handleAppear();
+    } else {
+      handleDisappear();
+    }
+  });
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 120) {
+      if (window.scrollY > 140) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -28,21 +62,18 @@ export const ScrollToTop = ({ style }: ScrollProps) => {
 
   return (
     <div style={style}>
-      {isVisible ? (
-        <button
-          style={{
-            backgroundColor: Colors.Cream,
-            borderRadius: 5,
-            borderColor: "transparent",
-            marginRight: 10,
-          }}
-          onClick={goTop}
-        >
-          <UilAngleUp size={"35"} color={Colors.BlueGray} />
-        </button>
-      ) : (
-        <div style={{ marginLeft: 57 }}></div>
-      )}
+      <animated.button
+        style={{
+          backgroundColor: Colors.Cream,
+          borderRadius: 5,
+          marginRight: 10,
+          borderColor: Colors.Cream,
+          ...scrollButton,
+        }}
+        onClick={goTop}
+      >
+        <UilAngleUp size={"35"} color={Colors.BlueGray} />
+      </animated.button>
     </div>
   );
 };
