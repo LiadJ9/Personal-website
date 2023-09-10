@@ -32,6 +32,7 @@ export const ParagraphStyle: CSS.Properties = {
 };
 
 // FOOTER STYLES
+
 export const FooterStyle: CSS.Properties = {
   backgroundColor: Colors.BlueGray,
   position: "sticky",
