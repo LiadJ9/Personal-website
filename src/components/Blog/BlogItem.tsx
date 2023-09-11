@@ -62,6 +62,7 @@ export const BlogItem = ({
             style={{
               borderRadius: "10px",
               maxWidth: "90%",
+              maxHeight: "60vh",
               height: "auto",
               ...imageSpring,
             }}

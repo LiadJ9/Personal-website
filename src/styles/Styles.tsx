@@ -53,7 +53,7 @@ export const InnerFooterStyle: CSS.Properties = {
 
 // BLOG STYLES
 
-export const BlogPageStyle: CSS.Properties = {
+export const PageStyle: CSS.Properties = {
   display: "flex",
   minHeight: "100vh",
   justifyContent: "center",
