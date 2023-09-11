@@ -1,7 +1,7 @@
 import React from "react";
 import { PageStyle } from "../styles/Styles";
 import { Colors } from "../styles/Colors";
-import { HiddenImage } from "../components";
+import { Dots, HiddenImage } from "../components";
 
 export const Homepage = () => {
   return (
@@ -28,7 +28,8 @@ export const Homepage = () => {
             Front-end Developer | QA Engineer | Hopeful Romantic
           </p>
         </div>
-        <HiddenImage />
+        <Dots secondMargin="5vh" style={{ marginTop: "1vh" }} />
+        <HiddenImage img={require("../images/The_bear.jpg")} />
       </div>
       <div
         style={{

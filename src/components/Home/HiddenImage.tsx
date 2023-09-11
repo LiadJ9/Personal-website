@@ -3,7 +3,11 @@ import { useInView } from "react-intersection-observer";
 import { animated, useSpring } from "@react-spring/web";
 import { Colors } from "../../styles/Colors";
 
-export const HiddenImage = () => {
+interface HiddenProps {
+  img: string;
+}
+
+export const HiddenImage = ({ img }: HiddenProps) => {
   const [hiderSpring, hiderApi] = useSpring(() => ({
     config: { precision: 0.0001 },
   }));
@@ -45,11 +49,11 @@ export const HiddenImage = () => {
       />
       <img
         style={{
-          maxWidth: "100%",
+          maxWidth: "80%",
           maxHeight: "60vh",
           height: "auto",
         }}
-        src={require("../../images/The_bear.jpg")}
+        src={img}
       />
     </div>
   );
