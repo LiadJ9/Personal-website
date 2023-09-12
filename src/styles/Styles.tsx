@@ -98,3 +98,22 @@ export const Fo_o_Fo_ErrorStyle: CSS.Properties = {
   color: Colors.DarkBrown,
   fontSize: "x-large",
 };
+
+// HOME STYLES
+
+export const SectionStyle: CSS.Properties = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  width: "100%",
+};
+
+export const SectionTextStyle: CSS.Properties = {
+  display: "flex",
+  flexDirection: "column",
+  marginLeft: "2vh",
+  color: Colors.SilkCaramel,
+  fontSize: "xx-large",
+  fontFamily: "Poppins",
+  maxWidth: "45%",
+};

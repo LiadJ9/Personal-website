@@ -1,18 +1,24 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { animated, useSpring } from "@react-spring/web";
-import { Colors } from "../../styles/Colors";
+import { Colors } from "../../../styles/Colors";
 
-interface HiddenProps {
-  img: string;
+interface HiddenComponentProps {
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+  containerStyle?: React.CSSProperties;
 }
 
-export const HiddenImage = ({ img }: HiddenProps) => {
+export const HiddenComponent = ({
+  children,
+  style,
+  containerStyle,
+}: HiddenComponentProps) => {
   const [hiderSpring, hiderApi] = useSpring(() => ({
     config: { precision: 0.0001 },
   }));
 
-  const [block1, inView] = useInView({ threshold: 0.9 });
+  const [block1, inView] = useInView({ threshold: 0.7 });
 
   useEffect(() => {
     if (inView) {
@@ -36,25 +42,19 @@ export const HiddenImage = ({ img }: HiddenProps) => {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", ...containerStyle }}>
       <animated.div
         style={{
           position: "absolute",
           width: "100%",
           height: "100%",
-          backgroundColor: Colors.SilkCaramel,
+          backgroundColor: Colors.DarkerBrown,
           ...hiderSpring,
+          ...style,
         }}
         ref={block1}
       />
-      <img
-        style={{
-          maxWidth: "80%",
-          maxHeight: "60vh",
-          height: "auto",
-        }}
-        src={img}
-      />
+      {children}
     </div>
   );
 };
