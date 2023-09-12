@@ -14,3 +14,4 @@ export * from "./Home/homeComponents/Space";
 export * from "./Home/SelfSection";
 export * from "./Home/AboutSection";
 export * from "./Home/MadePossible";
+export * from "./Home/CodeSection";
