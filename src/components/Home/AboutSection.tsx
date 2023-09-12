@@ -6,11 +6,14 @@ import { Space } from "./homeComponents/Space";
 export const AboutSection = () => {
   return (
     <div
-      style={{
-        backgroundColor: Colors.SilkCaramel,
-        height: "65vh",
-        ...SectionStyle,
-      }}
+      style={
+        {
+          backgroundColor: Colors.SilkCaramel,
+          height: "65vh",
+          justifyContent: "space-between",
+          ...SectionStyle,
+        } /* Cool image vectors of TS/React spring/react route/ect */
+      }
     >
       <div
         style={{
@@ -26,7 +29,7 @@ export const AboutSection = () => {
       >
         <p>So what&apos;s all this?</p>
         <p style={{ fontSize: "x-large", lineHeight: "1.7" }}>
-          Welcome to my website, Made only in <b>two weeks</b>, using only{" "}
+          Welcome to my website, Made only in <b>one week</b>, using only{" "}
           <b>original Components</b> created by me. This is where I showcase my
           skills as a developer using <b>Javascript, Typescript, Python</b> and
           more, Including Code snippets from projects I&apos;ve done in the

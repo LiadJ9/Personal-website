@@ -1,6 +1,6 @@
 import React from "react";
 import { PageStyle } from "../styles/Styles";
-import { AboutSection, SelfSection } from "../components";
+import { AboutSection, MadePossible, SelfSection } from "../components";
 
 export const Homepage = () => {
   return (
@@ -8,7 +8,7 @@ export const Homepage = () => {
       <SelfSection />
       <AboutSection />
       <div /* Code examples showcasing my components */></div>
-      <div /* Cool image vectors of TS/React spring/react route/ect */></div>
+      <MadePossible />
     </div>
   );
 };

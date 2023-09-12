@@ -8,6 +8,7 @@ export const SelfSection = () => {
     <div
       style={{
         backgroundColor: Colors.SilkBrown,
+        justifyContent: "space-between",
         ...SectionStyle,
       }} /* Basic liad info + image with cool animation */
     >

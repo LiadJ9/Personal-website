@@ -104,7 +104,6 @@ export const Fo_o_Fo_ErrorStyle: CSS.Properties = {
 export const SectionStyle: CSS.Properties = {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between",
   width: "100%",
 };
 
