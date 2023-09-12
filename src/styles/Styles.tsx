@@ -32,6 +32,7 @@ export const ParagraphStyle: CSS.Properties = {
 };
 
 // FOOTER STYLES
+
 export const FooterStyle: CSS.Properties = {
   backgroundColor: Colors.BlueGray,
   position: "sticky",
@@ -52,7 +53,7 @@ export const InnerFooterStyle: CSS.Properties = {
 
 // BLOG STYLES
 
-export const BlogPageStyle: CSS.Properties = {
+export const PageStyle: CSS.Properties = {
   display: "flex",
   minHeight: "100vh",
   justifyContent: "center",
@@ -96,4 +97,22 @@ export const Fo_o_Fo_ErrorStyle: CSS.Properties = {
   marginBottom: "10vh",
   color: Colors.DarkBrown,
   fontSize: "x-large",
+};
+
+// HOME STYLES
+
+export const SectionStyle: CSS.Properties = {
+  display: "flex",
+  flexDirection: "row",
+  width: "100%",
+};
+
+export const SectionTextStyle: CSS.Properties = {
+  display: "flex",
+  flexDirection: "column",
+  marginLeft: "2vh",
+  color: Colors.SilkCaramel,
+  fontSize: "xx-large",
+  fontFamily: "Poppins",
+  maxWidth: "45%",
 };

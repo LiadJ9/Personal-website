@@ -4,4 +4,7 @@ export const Colors = {
   DarkBrown: "#241a14", // Text Color over "silkCaramel"
   SilkCaramel: "#c29b66", // Background color for specific areas
   SilkBrown: "#67473b", // Shade contrast for SilkCaramel
+  DarkerBrown: "#422a22", // Darker shade for hiding component
 };
+// #67473b
+// #c29b66

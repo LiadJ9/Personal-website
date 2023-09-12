@@ -17,7 +17,7 @@ export const blogs: blogType[] = [
     title: "Blog title",
     content: `string text line 1
     string text line 2`,
-    img: require("../images/React_header.jpg"),
+    img: require("../images/The_bear.jpg"),
     key: 0,
     timestamp: new Date("9/8/2023").toDateString(),
   },

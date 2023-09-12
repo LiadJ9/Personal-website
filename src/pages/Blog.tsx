@@ -2,11 +2,11 @@ import React from "react";
 import { BlogList } from "../components/Blog/BlogList";
 import { blogs } from "../consts/blogs";
 import { PageHeader } from "../components";
-import { BlogPageStyle } from "../styles/Styles";
+import { PageStyle } from "../styles/Styles";
 
 export const Blog = () => {
   return (
-    <div style={BlogPageStyle}>
+    <div style={PageStyle}>
       <PageHeader name="Blogs" />
       <BlogList blogs={blogs} />
     </div>
