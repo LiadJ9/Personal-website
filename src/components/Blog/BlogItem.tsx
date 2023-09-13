@@ -12,6 +12,8 @@ interface BlogItemProps {
   content: string;
   content2?: string;
   content3?: string;
+  content4?: string;
+  content5?: string;
   img?: string;
   timestamp: string;
 }
@@ -21,6 +23,8 @@ export const BlogItem = ({
   content,
   content2,
   content3,
+  content4,
+  content5,
   img,
   timestamp,
 }: BlogItemProps) => {
@@ -72,6 +76,8 @@ export const BlogItem = ({
         <p style={ParagraphStyle}>{content}</p>
         {content2 && <p style={ParagraphStyle}>{content2}</p>}
         {content3 && <p style={ParagraphStyle}>{content3}</p>}
+        {content4 && <p style={ParagraphStyle}>{content4}</p>}
+        {content5 && <p style={ParagraphStyle}>{content5}</p>}
       </div>
     </div>
   );

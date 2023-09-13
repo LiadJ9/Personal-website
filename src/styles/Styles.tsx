@@ -13,6 +13,7 @@ export const LinkStyle: CSS.Properties = {
   color: Colors.Cream,
   transition: "opacity 0.2s",
   fontFamily: "Poppins",
+  justifyContent: "center",
 };
 
 export const HoveredLink: CSS.Properties = {
@@ -26,6 +27,8 @@ export const HoveredLink: CSS.Properties = {
 export const ParagraphStyle: CSS.Properties = {
   textAlign: "left",
   fontFamily: "Poppins",
+  wordSpacing: "length",
+  lineHeight: 1.6,
   fontSize: "large",
   marginBottom: "2vh",
   color: Colors.DarkBrown,

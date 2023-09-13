@@ -18,7 +18,7 @@ export const Linker = ({ to, name, style }: LinkerProps) => {
   };
 
   return (
-    <div style={style}>
+    <div style={{ textAlign: "center", ...style }}>
       <Link
         style={IsHovered ? HoveredLink : LinkStyle}
         onMouseEnter={HandleMouseEnter}

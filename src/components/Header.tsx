@@ -13,7 +13,14 @@ export const Header = () => {
           img={require("../images/doggie.ico")}
         />
         <Linker style={{ margin: "10%" }} to="/" name="Home" />
-        <Linker style={{ margin: "10%" }} to="/Music" name="Music" />
+        <Linker
+          style={{
+            display: "flex",
+            margin: "10%",
+          }}
+          to="/About"
+          name="About"
+        />
         <Linker style={{ margin: "10%" }} to="/Blog" name="Blog" />
       </div>
     </div>
