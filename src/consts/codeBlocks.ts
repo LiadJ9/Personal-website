@@ -1,4 +1,6 @@
-import React from "react";
+
+export const codeBlock = 
+`import React from "react";
 import { animated, useSpring } from "@react-spring/web";
 
 interface RotatingImageProps {
@@ -8,13 +10,14 @@ interface RotatingImageProps {
   height?: number | string;
   duration?: number;
 }
+// A Global component for a generic spinning image
 
 export const RotatingImage = ({
   style,
   img,
   width,
   height,
-  duration,
+  duration, // defines rotation speed
 }: RotatingImageProps) => {
   const imageSpring = useSpring({
     from: { transform: "rotate(0deg)" },
@@ -31,3 +34,4 @@ export const RotatingImage = ({
     />
   );
 };
+`

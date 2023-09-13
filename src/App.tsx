@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Layout, NoPage, Homepage, Blog, Music } from "./pages";
+import { Layout, NoPage, Homepage, Blog, AboutMe } from "./pages";
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
           <Route path="Blog" element={<Blog />} />
-          <Route path="Music" element={<Music />} />
+          <Route path="About" element={<AboutMe />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

@@ -21,8 +21,8 @@ export const SelfSection = () => {
         <p>Front-end Developer | QA Engineer | Just for fun</p>
         <p style={{ fontSize: "x-large", lineHeight: "1.6" }}>
           Hi there 👋 I&apos;m Liad, I specialize in Creating React and React
-          Native websites and QA automation, Looking forward to working on new
-          projects and ideas.
+          Native websites and QA automation, Self taught, And Looking forward to
+          working on new projects and ideas.
         </p>
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
