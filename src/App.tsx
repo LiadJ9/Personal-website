@@ -6,10 +6,10 @@ const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="Personal-website/" element={<Layout />}>
           <Route index element={<Homepage />} />
-          <Route path="Blog" element={<Blog />} />
-          <Route path="About" element={<AboutMe />} />
+          <Route path="Personal-website/Blog" element={<Blog />} />
+          <Route path="Personal-website/About" element={<AboutMe />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
