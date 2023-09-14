@@ -8,6 +8,7 @@ import {
   SelfMobileTextStyle,
   SectionStyle,
   SelfSectionTextStyle,
+  RowsStyle,
 } from "../../styles/Styles";
 
 interface SelfSectionProps {
@@ -38,7 +39,11 @@ export const SelfSection = ({ isMobile }: SelfSectionProps) => {
         </p>
       </div>
       <div
-        style={{ display: "flex", flexDirection: "column", ...MobileRowsStyle }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          ...(isMobile ? MobileRowsStyle : RowsStyle),
+        }}
       >
         {Array.from({ length: isMobile ? 4 : 11 }, (_, index) => (
           <Dots
@@ -60,7 +65,7 @@ export const SelfSection = ({ isMobile }: SelfSectionProps) => {
         ))}
         <Dots
           style={{
-            marginBottom: isMobile ? "3.8rem" : "3rem",
+            marginBottom: isMobile ? "3.8rem" : "7rem",
             marginRight: isMobile ? "6rem" : "0rem",
           }}
           isMobile={isMobile}

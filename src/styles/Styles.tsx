@@ -140,3 +140,9 @@ export const MobileRowsStyle: CSS.Properties = {
   alignItems: "center",
   marginRight: "18rem",
 };
+
+export const RowsStyle: CSS.Properties = {
+  justifyContent: "center",
+  alignItems: "center",
+  marginRight: "2rem",
+};
