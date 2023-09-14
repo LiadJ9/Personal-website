@@ -5,9 +5,9 @@ import { Colors } from "../../styles/Colors";
 import {
   MobileRowsStyle,
   MobileSectionStyle,
-  MobileTextStyle,
+  SelfMobileTextStyle,
   SectionStyle,
-  SectionTextStyle,
+  SelfSectionTextStyle,
 } from "../../styles/Styles";
 
 interface SelfSectionProps {
@@ -26,7 +26,7 @@ export const SelfSection = ({ isMobile }: SelfSectionProps) => {
     >
       <div
         style={{
-          ...(isMobile ? MobileTextStyle : SectionTextStyle),
+          ...(isMobile ? SelfMobileTextStyle : SelfSectionTextStyle),
         }}
       >
         <p style={{}}>Liad Manteka</p>
@@ -60,8 +60,8 @@ export const SelfSection = ({ isMobile }: SelfSectionProps) => {
         ))}
         <Dots
           style={{
-            marginBottom: isMobile ? "4rem" : "3rem",
-            marginRight: isMobile ? "5rem" : "0rem",
+            marginBottom: isMobile ? "3.8rem" : "3rem",
+            marginRight: isMobile ? "6rem" : "0rem",
           }}
           isMobile={isMobile}
           dotStyle1={{
@@ -86,7 +86,12 @@ export const SelfSection = ({ isMobile }: SelfSectionProps) => {
       </div>
       <div style={{ marginLeft: isMobile ? "0rem" : "14rem" }}>
         <HiddenComponent
-          style={{ borderTopLeftRadius: 6, borderBottomLeftRadius: 6 }}
+          style={
+            isMobile
+              ? { borderRadius: 6, height: "98%" }
+              : { borderTopLeftRadius: 6, borderBottomLeftRadius: 6 }
+          }
+          isMobile={isMobile}
         >
           <img
             style={{

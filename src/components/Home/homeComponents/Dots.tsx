@@ -8,7 +8,7 @@ interface DotsProps {
   dotStyle1?: React.CSSProperties;
   dotStyle2?: React.CSSProperties;
   dotStyle3?: React.CSSProperties;
-  isMobile?: boolean;
+  isMobile: boolean;
 }
 
 export const Dots = ({
@@ -28,9 +28,15 @@ export const Dots = ({
     config: { precision: 0.0001 },
   }));
 
-  const [dot, inView] = useInView({ threshold: 0.9 });
-  const [dot2, inView2] = useInView({ threshold: 0.9 });
-  const [dot3, inView3] = useInView({ threshold: 0.9 });
+  const [dot, inView] = useInView(
+    isMobile ? { threshold: 0.2 } : { threshold: 0.9 }
+  );
+  const [dot2, inView2] = useInView(
+    isMobile ? { threshold: 0.2 } : { threshold: 0.9 }
+  );
+  const [dot3, inView3] = useInView(
+    isMobile ? { threshold: 0.2 } : { threshold: 0.9 }
+  );
 
   useEffect(() => {
     if (inView) {
@@ -57,6 +63,10 @@ export const Dots = ({
   }, [inView3]);
 
   const handleDisappear = (viewFlag: boolean, api: SpringRef<object>) => {
+    if (isMobile) {
+      handleDisappearMobile(viewFlag, api);
+      return;
+    }
     api.start({
       from: {
         x: viewFlag ? 0 : -100,
@@ -64,6 +74,19 @@ export const Dots = ({
       },
       to: {
         x: viewFlag ? -100 : 0,
+        opacity: viewFlag ? 1 : 0,
+      },
+    });
+  };
+
+  const handleDisappearMobile = (viewFlag: boolean, api: SpringRef<object>) => {
+    api.start({
+      from: {
+        x: viewFlag ? 0 : +100,
+        opacity: viewFlag ? 0 : 1,
+      },
+      to: {
+        x: viewFlag ? +100 : 0,
         opacity: viewFlag ? 1 : 0,
       },
     });

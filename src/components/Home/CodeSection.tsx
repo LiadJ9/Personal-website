@@ -3,10 +3,14 @@ import { CodeBlock, hopscotch } from "react-code-blocks";
 import { codeBlock } from "../../consts/codeBlocks";
 import { RotatingImage } from "../index";
 import { UilArrowRight } from "@iconscout/react-unicons";
-import { SectionStyle } from "../../styles/Styles";
+import { MobileSectionStyle, SectionStyle } from "../../styles/Styles";
 import { Colors } from "../../styles/Colors";
 
-export const CodeSection = () => {
+interface CodeProps {
+  isMobile: boolean;
+}
+
+export const CodeSection = ({ isMobile }: CodeProps) => {
   const [duration, setDuration] = useState<number>(3000);
   const handleChange = (number: number) => {
     setDuration(number);
@@ -14,10 +18,12 @@ export const CodeSection = () => {
   return (
     <div
       style={{
+        display: "flex",
+        flexDirection: "column",
         backgroundColor: Colors.SilkCaramel,
-        height: "65vh",
+        height: isMobile ? "" : "65vh",
         justifyContent: "space-between",
-        ...SectionStyle,
+        ...(isMobile ? MobileSectionStyle : SectionStyle),
       }} /* Code examples showcasing my components */
     >
       <div
@@ -29,14 +35,19 @@ export const CodeSection = () => {
           color: Colors.SilkBrown,
           fontSize: "xx-large",
           fontFamily: "Poppins",
-          maxWidth: "36%",
+          maxWidth: isMobile ? "80%" : "36%",
         }}
       >
         <p style={{ marginTop: "4vh" }}>Looking for more?</p>
-        <p style={{ fontSize: 24 }}>
-          Here&apos;s an example of one of the components I created 👉
+        <p style={{ fontSize: 24, textAlign: isMobile ? "center" : "left" }}>
+          Here&apos;s an example of one of the components I created.
         </p>
-        <p style={{ fontSize: 25 }}>
+        <p
+          style={{
+            fontSize: isMobile ? 20 : 25,
+            textAlign: isMobile ? "center" : "left",
+          }}
+        >
           Additionally, the source code for this website and instructions on how
           to set it up are on my{" "}
           <a
@@ -54,6 +65,7 @@ export const CodeSection = () => {
           border: "solid 3px",
           height: "80%",
           alignSelf: "center",
+          width: isMobile ? "90%" : "",
           borderColor: Colors.DarkerBrown,
           borderRadius: 7,
         }}
@@ -77,7 +89,8 @@ export const CodeSection = () => {
             fontSize: 15,
           }}
         >
-          Try it out! Type any number
+          Try it out! Type any number, This defines how long the every rotation
+          will be (Milliseconds)
         </p>
         <input
           style={{
@@ -94,7 +107,11 @@ export const CodeSection = () => {
             handleChange(Number(num.target.value));
           }}
         />
-        <UilArrowRight color={Colors.DarkerBrown} size={150} />
+        <UilArrowRight
+          style={{ transform: isMobile ? "rotate(90deg)" : "" }}
+          color={Colors.DarkerBrown}
+          size={150}
+        />
       </div>
       <div
         style={{
@@ -105,12 +122,13 @@ export const CodeSection = () => {
           justifyContent: "center",
           alignItems: "center",
           borderRadius: 7,
+          marginBottom: isMobile ? "2rem" : "",
         }}
       >
         <RotatingImage
           img={require("../../images/star_cream.png")}
-          width={"300vh"}
-          height={"300vh"}
+          width={isMobile ? "150vh" : "300vh"}
+          height={isMobile ? "150vh" : "300vh"}
           duration={duration}
         />
       </div>

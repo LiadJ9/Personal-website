@@ -4,11 +4,15 @@ import { blogs } from "../consts/blogs";
 import { PageHeader } from "../components";
 import { PageStyle } from "../styles/Styles";
 
-export const Blog = () => {
+interface BlogProps {
+  isMobile: boolean;
+}
+
+export const Blog = ({ isMobile }: BlogProps) => {
   return (
     <div style={PageStyle}>
       <PageHeader name="Blogs" />
-      <BlogList blogs={blogs} />
+      <BlogList blogs={blogs} isMobile={isMobile} />
     </div>
   );
 };

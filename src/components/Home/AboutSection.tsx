@@ -1,19 +1,20 @@
 import React from "react";
-import { SectionStyle } from "../../styles/Styles";
+import { MobileSectionStyle, SectionStyle } from "../../styles/Styles";
 import { Colors } from "../../styles/Colors";
 import { Space } from "./homeComponents/Space";
+interface AboutProps {
+  isMobile: boolean;
+}
 
-export const AboutSection = () => {
+export const AboutSection = ({ isMobile }: AboutProps) => {
   return (
     <div
-      style={
-        {
-          backgroundColor: Colors.SilkCaramel,
-          height: "65vh",
-          justifyContent: "space-between",
-          ...SectionStyle,
-        } /* Cool image vectors of TS/React spring/react route/ect */
-      }
+      style={{
+        display: "flex",
+        backgroundColor: Colors.SilkCaramel,
+        justifyContent: isMobile ? "center" : "space-between",
+        ...(isMobile ? MobileSectionStyle : SectionStyle),
+      }}
     >
       <div
         style={{
@@ -22,13 +23,18 @@ export const AboutSection = () => {
           marginLeft: "2vh",
           marginTop: "3vh",
           color: Colors.SilkBrown,
-          fontSize: "xx-large",
+          fontSize: isMobile ? "x-large" : "xx-large",
           fontFamily: "Poppins",
-          maxWidth: "45%",
+          maxWidth: isMobile ? "90%" : "45%",
         }}
       >
         <p>So what&apos;s all this?</p>
-        <p style={{ fontSize: "x-large", lineHeight: "1.7" }}>
+        <p
+          style={{
+            fontSize: isMobile ? "large" : "x-large",
+            lineHeight: "1.7",
+          }}
+        >
           Welcome to my website, Made only in <b>one week</b>, using only{" "}
           <b>original Components</b> created by me. This is where I showcase my
           skills as a developer using <b>Javascript, Typescript, Python</b> and
@@ -38,7 +44,7 @@ export const AboutSection = () => {
         </p>
       </div>
       <div style={{ width: "37%" }} /* Spaaacer div */ />
-      <Space />
+      <Space isMobile={isMobile} />
       <div />
     </div>
   );

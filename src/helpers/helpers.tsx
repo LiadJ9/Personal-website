@@ -5,7 +5,7 @@ export const ranRem = (low?: boolean) => {
 };
 
 export const mobileRanRem = (low?: boolean) => {
-  const num = Math.floor(Math.random() * (low ? 6 : 10) + 2);
+  const num = Math.floor(Math.random() * (low ? 7 : 8) + 2);
   const ranrem = String(num) + "rem";
   return ranrem;
 };

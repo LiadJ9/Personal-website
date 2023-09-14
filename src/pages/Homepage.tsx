@@ -8,16 +8,16 @@ import {
 } from "../components";
 
 interface HomepageProps {
-  isMobileHook: boolean;
+  isMobile: boolean;
 }
 
-export const Homepage = ({ isMobileHook }: HomepageProps) => {
+export const Homepage = ({ isMobile }: HomepageProps) => {
   return (
     <div style={PageStyle}>
-      <SelfSection isMobile={isMobileHook} />
-      <AboutSection />
-      <CodeSection />
-      <MadePossible />
+      <SelfSection isMobile={isMobile} />
+      <AboutSection isMobile={isMobile} />
+      <CodeSection isMobile={isMobile} />
+      <MadePossible isMobile={isMobile} />
     </div>
   );
 };

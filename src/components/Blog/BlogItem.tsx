@@ -16,6 +16,7 @@ interface BlogItemProps {
   content5?: string;
   img?: string;
   timestamp: string;
+  isMobile: boolean;
 }
 
 export const BlogItem = ({
@@ -27,6 +28,7 @@ export const BlogItem = ({
   content5,
   img,
   timestamp,
+  isMobile,
 }: BlogItemProps) => {
   const titleSpring = useSpring({
     from: { x: -50, opacity: 0 },
@@ -43,11 +45,17 @@ export const BlogItem = ({
   });
 
   return (
-    <div style={OuterBlogpostContainerStyle}>
+    <div
+      style={{
+        maxWidth: isMobile ? "46vh" : "110vh",
+        ...OuterBlogpostContainerStyle,
+      }}
+    >
       <div style={InnerBlogpostContainerStyle}>
         <animated.h1
           style={{
             fontFamily: "Poppins",
+            textAlign: "center",
             color: Colors.DarkBrown,
             ...titleSpring,
           }}

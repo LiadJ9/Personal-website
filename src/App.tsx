@@ -9,14 +9,14 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Homepage isMobileHook={isTabletOrMobile} />} />
-          <Route path="/Blog" element={<Blog />} />
+          <Route index element={<Homepage isMobile={isTabletOrMobile} />} />
+          <Route path="/Blog" element={<Blog isMobile={isTabletOrMobile} />} />
           <Route path="/About" element={<AboutMe />} />
           <Route
             path="/Personal-website"
             element={
-              <Homepage isMobileHook={isTabletOrMobile} />
-            } /* This is just becuase of how gitpages handles routing :/ */
+              <Homepage isMobile={isTabletOrMobile} />
+            } /* This is just becuase of how gitpages handles routing with React-Router :/ */
           />
           <Route path="*" element={<NoPage />} />
         </Route>
