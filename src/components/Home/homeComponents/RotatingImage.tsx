@@ -25,8 +25,8 @@ export const RotatingImage = ({
   return (
     <animated.img
       style={{ ...style, ...imageSpring }}
-      width={width ? width : 55}
-      height={height ? height : 55}
+      width={width ? width : "55rem"}
+      height={height ? height : "55rem"}
       src={img}
     />
   );

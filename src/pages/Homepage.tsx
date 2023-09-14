@@ -7,13 +7,17 @@ import {
   SelfSection,
 } from "../components";
 
-export const Homepage = () => {
+interface HomepageProps {
+  isMobile: boolean;
+}
+
+export const Homepage = ({ isMobile }: HomepageProps) => {
   return (
     <div style={PageStyle}>
-      <SelfSection />
-      <AboutSection />
-      <CodeSection />
-      <MadePossible />
+      <SelfSection isMobile={isMobile} />
+      <AboutSection isMobile={isMobile} />
+      <CodeSection isMobile={isMobile} />
+      <MadePossible isMobile={isMobile} />
     </div>
   );
 };

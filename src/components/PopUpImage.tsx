@@ -6,9 +6,15 @@ interface PopUpImageProps {
   imgStyle?: React.CSSProperties;
   src: string;
   href?: string;
+  isMobile: boolean;
 }
 
-export const PopUpImage = ({ src, imgStyle, href }: PopUpImageProps) => {
+export const PopUpImage = ({
+  src,
+  imgStyle,
+  href,
+  isMobile,
+}: PopUpImageProps) => {
   const [imageSpring, imageApi] = useSpring(() => ({
     config: { precision: 0.0001 },
   }));
@@ -57,7 +63,7 @@ export const PopUpImage = ({ src, imgStyle, href }: PopUpImageProps) => {
         >
           <animated.img
             style={{
-              width: "20vh",
+              width: isMobile ? "4.5rem" : "10rem",
               height: "auto",
               ...imageSpring,
               ...imgStyle,
@@ -69,7 +75,7 @@ export const PopUpImage = ({ src, imgStyle, href }: PopUpImageProps) => {
       ) : (
         <animated.img
           style={{
-            width: "20vh",
+            width: isMobile ? "4.5rem" : "10rem",
             height: "auto",
             ...imageSpring,
             ...imgStyle,

@@ -67,7 +67,6 @@ export const PageStyle: CSS.Properties = {
 
 export const OuterBlogpostContainerStyle: CSS.Properties = {
   display: "flex",
-  maxWidth: "110vh",
   boxShadow: `5px 7px ${Colors.SilkBrown}`,
   borderRadius: "8px",
   marginBottom: "5vh",
@@ -103,14 +102,20 @@ export const Fo_o_Fo_ErrorStyle: CSS.Properties = {
 };
 
 // HOME STYLES
-
 export const SectionStyle: CSS.Properties = {
   display: "flex",
   flexDirection: "row",
   width: "100%",
 };
+export const MobileSectionStyle: CSS.Properties = {
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  justifyContent: "center",
+  alignItems: "center",
+};
 
-export const SectionTextStyle: CSS.Properties = {
+export const SelfSectionTextStyle: CSS.Properties = {
   display: "flex",
   flexDirection: "column",
   marginLeft: "2vh",
@@ -118,4 +123,26 @@ export const SectionTextStyle: CSS.Properties = {
   fontSize: "xx-large",
   fontFamily: "Poppins",
   maxWidth: "45%",
+};
+
+export const SelfMobileTextStyle: CSS.Properties = {
+  display: "flex",
+  flexDirection: "column",
+  color: Colors.SilkCaramel,
+  fontSize: "xx-large",
+  fontFamily: "Poppins",
+  maxWidth: "100%",
+  textAlign: "center",
+};
+
+export const MobileRowsStyle: CSS.Properties = {
+  justifyContent: "center",
+  alignItems: "center",
+  marginRight: "18rem",
+};
+
+export const RowsStyle: CSS.Properties = {
+  justifyContent: "center",
+  alignItems: "center",
+  marginRight: "2rem",
 };

@@ -7,18 +7,22 @@ interface HiddenComponentProps {
   children: React.ReactNode;
   style?: React.CSSProperties;
   containerStyle?: React.CSSProperties;
+  isMobile: boolean;
 }
 
 export const HiddenComponent = ({
   children,
   style,
   containerStyle,
+  isMobile,
 }: HiddenComponentProps) => {
   const [hiderSpring, hiderApi] = useSpring(() => ({
     config: { precision: 0.0001 },
   }));
 
-  const [block1, inView] = useInView({ threshold: 0.7 });
+  const [block1, inView] = useInView(
+    isMobile ? { threshold: 0.3 } : { threshold: 0.7 }
+  );
 
   useEffect(() => {
     if (inView) {
@@ -31,11 +35,11 @@ export const HiddenComponent = ({
   const handleDisappear = () => {
     hiderApi.start({
       from: {
-        x: inView ? 0 : -100,
+        x: inView ? 0 : -50,
         opacity: inView ? 1 : 0,
       },
       to: {
-        x: inView ? -100 : 0,
+        x: inView ? -50 : 0,
         opacity: inView ? 0 : 1,
       },
     });

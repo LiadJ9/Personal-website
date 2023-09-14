@@ -5,9 +5,10 @@ import { BlogItem } from "./BlogItem";
 interface BlogProps {
   blogs: blogType[];
   style?: React.CSSProperties;
+  isMobile: boolean;
 }
 
-export const BlogList = ({ blogs, style }: BlogProps) => {
+export const BlogList = ({ blogs, style, isMobile }: BlogProps) => {
   return (
     <div style={style}>
       {Object.keys(blogs).map((blog, index) => (
@@ -22,6 +23,7 @@ export const BlogList = ({ blogs, style }: BlogProps) => {
               content5={blogs[index].content5}
               img={blogs[index].img}
               timestamp={blogs[index].timestamp}
+              isMobile={isMobile}
             />
           </div>
         </>
