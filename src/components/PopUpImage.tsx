@@ -57,7 +57,7 @@ export const PopUpImage = ({ src, imgStyle, href }: PopUpImageProps) => {
         >
           <animated.img
             style={{
-              width: "20vh",
+              width: "10rem",
               height: "auto",
               ...imageSpring,
               ...imgStyle,
@@ -69,7 +69,7 @@ export const PopUpImage = ({ src, imgStyle, href }: PopUpImageProps) => {
       ) : (
         <animated.img
           style={{
-            width: "20vh",
+            width: "10rem",
             height: "auto",
             ...imageSpring,
             ...imgStyle,

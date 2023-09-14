@@ -32,7 +32,11 @@ export const MadePossible = () => {
             href={"https://developer.mozilla.org/en-US/docs/Web/JavaScript"}
           />
           <PopUpImage
-            imgStyle={{ width: "17.5vh", height: "17.5vh", marginTop: "1.3vh" }}
+            imgStyle={{
+              width: "8.7rem",
+              height: "8.7rem",
+              marginTop: "0.7rem",
+            }}
             src={require("../../images/typescript-cream.png")}
             href={"https://www.typescriptlang.org/"}
           />

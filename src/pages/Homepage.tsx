@@ -7,10 +7,14 @@ import {
   SelfSection,
 } from "../components";
 
-export const Homepage = () => {
+interface HomepageProps {
+  isMobileHook: boolean;
+}
+
+export const Homepage = ({ isMobileHook }: HomepageProps) => {
   return (
     <div style={PageStyle}>
-      <SelfSection />
+      <SelfSection isMobile={isMobileHook} />
       <AboutSection />
       <CodeSection />
       <MadePossible />

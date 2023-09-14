@@ -1,20 +1,32 @@
 import React from "react";
 import { Dots, HiddenComponent } from "../index";
+import { mobileRanRem, ranRem } from "../../helpers/helpers";
 import { Colors } from "../../styles/Colors";
-import { SectionStyle, SectionTextStyle } from "../../styles/Styles";
+import {
+  MobileRowsStyle,
+  MobileSectionStyle,
+  MobileTextStyle,
+  SectionStyle,
+  SectionTextStyle,
+} from "../../styles/Styles";
 
-export const SelfSection = () => {
+interface SelfSectionProps {
+  isMobile: boolean;
+}
+
+export const SelfSection = ({ isMobile }: SelfSectionProps) => {
   return (
     <div
       style={{
         backgroundColor: Colors.SilkBrown,
-        justifyContent: "space-between",
-        ...SectionStyle,
+        justifyContent: isMobile ? "center" : "space-between",
+        flexDirection: "row",
+        ...(isMobile ? MobileSectionStyle : SectionStyle),
       }} /* Basic liad info + image with cool animation */
     >
       <div
         style={{
-          ...SectionTextStyle,
+          ...(isMobile ? MobileTextStyle : SectionTextStyle),
         }}
       >
         <p style={{}}>Liad Manteka</p>
@@ -25,48 +37,65 @@ export const SelfSection = () => {
           working on new projects and ideas.
         </p>
       </div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{ display: "flex", flexDirection: "column", ...MobileRowsStyle }}
+      >
+        {Array.from({ length: isMobile ? 4 : 11 }, (_, index) => (
+          <Dots
+            isMobile={isMobile}
+            key={index}
+            dotStyle1={{
+              marginLeft: isMobile ? mobileRanRem(true) : ranRem(true),
+              width: isMobile ? mobileRanRem() : ranRem(),
+            }}
+            dotStyle2={{
+              marginLeft: isMobile ? mobileRanRem(true) : ranRem(true),
+              width: isMobile ? mobileRanRem() : ranRem(),
+            }}
+            dotStyle3={{
+              marginLeft: isMobile ? mobileRanRem(true) : ranRem(true),
+              width: isMobile ? mobileRanRem() : ranRem(),
+            }}
+          />
+        ))}
         <Dots
-          dotStyle1={{ marginTop: "2vh", marginLeft: "5vh", width: "18vh" }}
-          dotStyle2={{ marginTop: "5vh", width: "23vh", marginLeft: "10vh" }}
-          dotStyle3={{ marginTop: "9vh", marginLeft: "6vh" }}
-        />
-        <Dots
-          style={{ marginTop: "8vh" }}
-          dotStyle1={{ marginTop: "5vh" }}
-          dotStyle2={{ marginTop: "9vh", marginLeft: "7vh", width: "10vh" }}
-          dotStyle3={{ marginTop: "13vh", marginLeft: "12vh", width: "12vh" }}
-        />
-        <Dots
-          style={{ marginTop: "14vh" }}
-          dotStyle1={{ marginLeft: "17vh", width: "20vh" }}
-          dotStyle2={{ width: "25vh", marginLeft: "5vh", marginTop: "5vh" }}
-          dotStyle3={{ width: "10vh", marginLeft: "10vh", marginTop: "8vh" }}
-        />
-        <Dots
-          style={{ marginTop: "10vh" }}
-          dotStyle1={{ width: "8vh", marginLeft: "5vh" }}
-          dotStyle2={{ width: "6vh", marginLeft: "9vh", marginTop: "6vh" }}
-          dotStyle3={{ width: "4vh", marginLeft: "13vh", marginTop: "9vh" }}
-        />
-        <Dots
-          style={{ marginTop: "10vh" }}
-          dotStyle1={{ width: "2vh", marginLeft: "15vh" }}
-          dotStyle2={{ width: "1vh", marginLeft: "17vh", marginTop: "4vh" }}
-          dotStyle3={{ width: "0vh", marginLeft: "13vh", marginTop: "9vh" }}
+          style={{
+            marginBottom: isMobile ? "4rem" : "3rem",
+            marginRight: isMobile ? "5rem" : "0rem",
+          }}
+          isMobile={isMobile}
+          dotStyle1={{
+            marginLeft: isMobile ? "8rem" : "10rem",
+            width: isMobile ? "6rem" : "4rem",
+            marginTop: "2rem",
+            height: "1.1rem",
+          }}
+          dotStyle2={{
+            marginLeft: "11.5rem",
+            width: "2rem",
+            marginTop: "4rem",
+            height: "1.0rem",
+          }}
+          dotStyle3={{
+            marginLeft: "13rem",
+            width: "1rem",
+            marginTop: "5.6rem",
+            height: "0.9rem",
+          }}
         />
       </div>
-      <div style={{ marginLeft: "20vh" }}>
+      <div style={{ marginLeft: isMobile ? "0rem" : "14rem" }}>
         <HiddenComponent
           style={{ borderTopLeftRadius: 6, borderBottomLeftRadius: 6 }}
         >
           <img
             style={{
               display: "flex",
-              maxWidth: "80%",
-              maxHeight: "60vh",
+              maxWidth: isMobile ? "30rem" : "40rem",
+              maxHeight: isMobile ? "30rem" : "40rem",
               height: "auto",
-              borderRadius: 6,
+              borderRadius: isMobile ? 14 : 6,
+              paddingBottom: isMobile ? 10 : 0,
             }}
             src={require("../../images/Liad_showcase2.jpg")}
           />

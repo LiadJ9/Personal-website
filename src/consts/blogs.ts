@@ -2,7 +2,7 @@ import { blogType } from "./types";
 
 export const blogs: blogType[] = [
   {
-    title: "The Bear: The family I never know I wanted",
+    title: "The Bear: The family I never knew I wanted",
     content: `Before watching The Bear I thought it was just going to be a show that wouldn't stretch any limits or make anything new that hasn't been done before, and that it would just be a simple show about food and cooking and the ordinary things you expect from any normal show about food, But I was wrong, how how much was I wrong.`,
     content2: `Although the show bases itself around a struggling family diner, taken over by new management, the focus is far from cinematic food shots that make your mouth drool, it's more about the struggles of working in a kitchen, having to juggle a thousand different issues just to stay sane, confronting and understanding other people's complexities and emotions, dealing with loss, hopelessness and lack of self in a dreary world that leaves us waiting for that big moment, not the one where you achieve some greatness or a wanted possession, it's a big moment where everything could just work out and feel fine, even if it's just for a single moment.`,
     content3: `Even with all the harsh aspects of the show, 'The Bear' presents the other side of the coin just as beautifully as the other, where for every trial and tribulation, there exists a hopeful, heartwarming conclusion, where you see the characters face their problems and understand each in a way that many shows cannot even think about doing right, whereas The Bear knows exactly how to convey these situations in a way that feels impactful and deserving.`,

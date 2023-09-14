@@ -28,21 +28,21 @@ export const Space = () => {
         dotStyle1={{
           backgroundColor: Colors.SilkBrown,
           marginLeft: "30vh",
-          width: "7vh",
-          height: "7vh",
+          width: "5rem",
+          height: "5rem",
         }}
         dotStyle2={{
           backgroundColor: Colors.SilkBrown,
           marginLeft: "60vh",
           marginTop: "10vh",
-          width: "5vh",
-          height: "5vh",
+          width: "3rem",
+          height: "3rem",
         }}
         dotStyle3={{
           backgroundColor: Colors.SilkBrown,
           marginLeft: "20vh",
-          width: "3vh",
-          height: "3vh",
+          width: "2rem",
+          height: "2rem",
           marginTop: "10vh",
         }}
       />
@@ -64,20 +64,20 @@ export const Space = () => {
         dotStyle1={{
           backgroundColor: Colors.SilkBrown,
           marginLeft: "45vh",
-          width: "5vh",
-          height: "5vh",
+          width: "3rem",
+          height: "3rem",
         }}
         dotStyle2={{
           backgroundColor: Colors.SilkBrown,
           marginLeft: "70vh",
-          width: "7vh",
-          height: "7vh",
+          width: "4.8rem",
+          height: "4.8rem",
         }}
         dotStyle3={{
           backgroundColor: Colors.SilkBrown,
           marginLeft: "10vh",
-          width: "3vh",
-          height: "3vh",
+          width: "2rem",
+          height: "2rem",
           marginTop: "10vh",
         }}
       />

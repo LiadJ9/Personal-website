@@ -103,11 +103,17 @@ export const Fo_o_Fo_ErrorStyle: CSS.Properties = {
 };
 
 // HOME STYLES
-
 export const SectionStyle: CSS.Properties = {
   display: "flex",
   flexDirection: "row",
   width: "100%",
+};
+export const MobileSectionStyle: CSS.Properties = {
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  justifyContent: "center",
+  alignItems: "center",
 };
 
 export const SectionTextStyle: CSS.Properties = {
@@ -118,4 +124,20 @@ export const SectionTextStyle: CSS.Properties = {
   fontSize: "xx-large",
   fontFamily: "Poppins",
   maxWidth: "45%",
+};
+
+export const MobileTextStyle: CSS.Properties = {
+  display: "flex",
+  flexDirection: "column",
+  color: Colors.SilkCaramel,
+  fontSize: "xx-large",
+  fontFamily: "Poppins",
+  maxWidth: "100%",
+  textAlign: "center",
+};
+
+export const MobileRowsStyle: CSS.Properties = {
+  justifyContent: "center",
+  alignItems: "center",
+  marginLeft: "7rem",
 };

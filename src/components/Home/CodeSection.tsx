@@ -114,7 +114,7 @@ export const CodeSection = () => {
           duration={duration}
         />
       </div>
-      <div /*spacer div */ />
+      <div style={{ marginLeft: "5rem" }} /*spacer div */ />
     </div>
   );
 };
