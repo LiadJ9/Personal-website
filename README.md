@@ -1,5 +1,5 @@
 # Personal-Website
- A website created to My react capabilities.
+ A website created to showcase my react capabilities.
 
 
  # How to start?
