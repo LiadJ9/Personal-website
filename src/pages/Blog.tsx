@@ -8,11 +8,9 @@ interface BlogProps {
   isMobile: boolean;
 }
 
-export const Blog = ({ isMobile }: BlogProps) => {
-  return (
-    <div style={PageStyle}>
-      <PageHeader name="Blogs" />
-      <BlogList blogs={blogs} isMobile={isMobile} />
-    </div>
-  );
-};
+export const Blog = ({ isMobile }: BlogProps) => (
+  <div style={PageStyle}>
+    <PageHeader name="Blogs" />
+    <BlogList blogs={blogs} isMobile={isMobile} />
+  </div>
+);

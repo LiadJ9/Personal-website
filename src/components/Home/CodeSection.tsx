@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { CodeBlock, hopscotch } from "react-code-blocks";
 import { codeBlock } from "../../consts/codeBlocks";
-import { RotatingImage } from "../index";
 import { UilArrowRight } from "@iconscout/react-unicons";
+import { RotatingImage } from "../index";
 import { MobileSectionStyle, SectionStyle } from "../../styles/Styles";
 import { Colors } from "../../styles/Colors";
 
@@ -13,6 +13,7 @@ interface CodeProps {
 export const CodeSection = ({ isMobile }: CodeProps) => {
   const [duration, setDuration] = useState<number>(3000);
   const handleChange = (number: number) => {
+    number = number * 1000;
     setDuration(number);
   };
   return (
@@ -62,23 +63,30 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
       <div
         style={{
           display: "flex",
-          border: "solid 3px",
           height: "80%",
           alignSelf: "center",
+          justifyContent: "center",
           width: isMobile ? "90%" : "",
-          borderColor: Colors.DarkerBrown,
-          borderRadius: 7,
         }}
       >
-        <CodeBlock text={codeBlock} language="tsx" theme={hopscotch} />
+        <CodeBlock
+          customStyle={{
+            border: "solid 3px",
+            borderColor: Colors.DarkerBrown,
+            borderRadius: 7,
+          }}
+          text={codeBlock}
+          language="tsx"
+          theme={hopscotch}
+        />
       </div>
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          maxWidth: "16vh",
-          marginTop: "13vh",
+          maxWidth: isMobile ? "20rem" : "16vh",
+          marginTop: isMobile ? "2rem" : "13vh",
         }}
       >
         <p
@@ -86,23 +94,26 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
             textAlign: "center",
             fontFamily: "Poppins",
             color: Colors.DarkerBrown,
-            fontSize: 15,
+            fontSize: 16,
           }}
         >
-          Try it out! Type any number, This defines how long the every rotation
-          will be (Milliseconds)
+          Try it out! Type any number. Tell the component how many seconds each
+          spin should take.
         </p>
         <input
           style={{
-            width: "30%",
+            width: "2rem",
+            height: "2rem",
+            textAlign: "center",
             borderRadius: 5,
             backgroundColor: Colors.DarkerBrown,
             border: "none",
             outline: "none",
             caretColor: Colors.SilkCaramel,
             color: Colors.SilkCaramel,
+            fontFamily: "Poppins",
           }}
-          maxLength={5}
+          maxLength={2}
           onChange={(num) => {
             handleChange(Number(num.target.value));
           }}

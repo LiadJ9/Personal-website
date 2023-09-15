@@ -9,36 +9,30 @@ import resume from "../documents/QA Resume Liad 823.pdf";
 import { FooterStyle, InnerFooterStyle } from "../styles/Styles";
 import { Colors } from "../styles/Colors";
 
-export const Footer = () => {
-  return (
-    <>
-      <div style={FooterStyle}>
-        <p
-          style={{ fontFamily: "Poppins", color: Colors.Cream, marginLeft: 5 }}
-        >
-          Created by LiadJ9
-        </p>
-        <div style={InnerFooterStyle}>
-          <a href="https://github.com/LiadJ9">
-            <UilGithubAlt size={"35"} color={Colors.Cream} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/liad-manteka-28703b259/"
-            style={{ marginLeft: "1vh" }}
-          >
-            <UilLinkedinAlt size={"35"} color={Colors.Cream} />
-          </a>
-          <a
-            href={resume}
-            target="_blank"
-            rel="noreferrer"
-            style={{ marginLeft: "1vh" }}
-          >
-            <UilBriefcaseAlt size={"35"} color={Colors.Cream} />
-          </a>
-        </div>
-        <ScrollToTop />
-      </div>
-    </>
-  );
-};
+export const Footer = () => (
+  <div style={FooterStyle}>
+    <p style={{ fontFamily: "Poppins", color: Colors.Cream, marginLeft: 5 }}>
+      Created by LiadJ9
+    </p>
+    <div style={InnerFooterStyle}>
+      <a href="https://github.com/LiadJ9">
+        <UilGithubAlt size={"35"} color={Colors.Cream} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/liad-manteka-28703b259/"
+        style={{ marginLeft: "1vh" }}
+      >
+        <UilLinkedinAlt size={"35"} color={Colors.Cream} />
+      </a>
+      <a
+        href={resume}
+        target="_blank"
+        rel="noreferrer"
+        style={{ marginLeft: "1vh" }}
+      >
+        <UilBriefcaseAlt size={"35"} color={Colors.Cream} />
+      </a>
+    </div>
+    <ScrollToTop />
+  </div>
+);
