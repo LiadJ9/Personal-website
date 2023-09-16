@@ -14,7 +14,6 @@ export const Header = () => (
       <Linker style={{ margin: "10%" }} to="/" name="Home" />
       <Linker
         style={{
-          display: "flex",
           margin: "10%",
         }}
         to="/About"

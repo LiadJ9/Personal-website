@@ -9,3 +9,8 @@ export const mobileRanRem = (low?: boolean) => {
   const ranrem = String(num) + "rem";
   return ranrem;
 };
+
+export const RanMs = () => {
+  const ran = Math.floor(Math.random() * 2000);
+  return ran;
+};

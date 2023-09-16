@@ -11,7 +11,10 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage isMobile={isTabletOrMobile} />} />
           <Route path="/Blog" element={<Blog isMobile={isTabletOrMobile} />} />
-          <Route path="/About" element={<AboutMe />} />
+          <Route
+            path="/About"
+            element={<AboutMe isMobile={isTabletOrMobile} />}
+          />
           <Route
             path="/Personal-website"
             element={

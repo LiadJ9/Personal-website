@@ -1,7 +1,7 @@
 import React from "react";
 import { MobileSectionStyle, SectionStyle } from "../../styles/Styles";
 import { Colors } from "../../styles/Colors";
-import { PopUpImage } from "../PopUpImage";
+import { PopUpImage } from "../ImageComponents/PopUpImage";
 
 interface MadeProps {
   isMobile: boolean;

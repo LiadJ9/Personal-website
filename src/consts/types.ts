@@ -9,3 +9,10 @@ export type blogType = {
   key: number;
   timestamp: string;
 };
+
+export type segmentType = {
+  header?: string;
+  text: string;
+  img?: string;
+  imgstyle?: React.CSSProperties;
+};

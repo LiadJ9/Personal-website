@@ -47,6 +47,7 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
           style={{
             fontSize: isMobile ? 20 : 25,
             textAlign: isMobile ? "center" : "left",
+            paddingRight: "2px",
           }}
         >
           Additionally, the source code for this website and instructions on how
