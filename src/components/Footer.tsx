@@ -5,7 +5,7 @@ import {
   UilBriefcaseAlt,
 } from "@iconscout/react-unicons";
 import { ScrollToTop } from "./index";
-import resume from "../documents/QA Resume Liad 823.pdf";
+import resume from "../documents/QA Resume Liad 923.pdf";
 import { FooterStyle, InnerFooterStyle } from "../styles/Styles";
 import { Colors } from "../styles/Colors";
 
