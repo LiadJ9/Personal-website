@@ -1,7 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Layout, NoPage, Homepage, Blog, AboutMe } from "./pages";
+import { Layout, NoPage, Homepage, Blog, AboutMe, Portfolio } from "./pages";
 
 const App = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -21,6 +21,11 @@ const App = () => {
               <Homepage isMobile={isTabletOrMobile} />
             } /* This is just becuase of how gitpages handles routing with React-Router :/ */
           />
+          <Route
+            path="/Portfolio"
+            element={
+              <Portfolio isMobile={isTabletOrMobile} />
+            } />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

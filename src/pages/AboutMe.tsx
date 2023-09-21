@@ -16,7 +16,7 @@ export const AboutMe = ({ isMobile }: AboutProps) => {
 
   const segment2: segmentType = {
     text: "Jogging or hiking whenever I can is always exciting, and seeing myself break a personal record feels like a great accomplishment. I love baking and cooking and constantly trying to improve my recipes, or trying out new ones.",
-    img: require("../images/wok.jpeg"),
+    img: require("../images/wok.jpg"),
     imgstyle: {
       marginLeft: isMobile ? "5rem" : "16rem",
       width: "9rem",

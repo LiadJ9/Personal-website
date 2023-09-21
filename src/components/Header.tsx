@@ -20,6 +20,7 @@ export const Header = () => (
         name="About"
       />
       <Linker style={{ margin: "10%" }} to="/Blog" name="Blog" />
+      <Linker style={{ margin: "10%" }} to="/Portfolio" name="Portfolio" />
     </div>
   </div>
 );
