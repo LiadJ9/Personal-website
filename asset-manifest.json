@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Personal-website/static/css/main.e6c13ad2.css",
-    "main.js": "/Personal-website/static/js/main.aaa0b6b3.js",
+    "main.js": "/Personal-website/static/js/main.1db7f9f9.js",
     "react-syntax-highlighter/refractor-core-import.js": "/Personal-website/static/js/react-syntax-highlighter/refractor-core-import.fe1fba10.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_abap.82d4c8e4.chunk.js",
     "react-syntax-highlighter_languages_refractor_abnf.js": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_abnf.0f0a7262.chunk.js",
@@ -281,13 +281,13 @@
     "react-syntax-highlighter_languages_refractor_yang.js": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_yang.e700c361.chunk.js",
     "react-syntax-highlighter_languages_refractor_zig.js": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_zig.cb84a363.chunk.js",
     "static/js/787.3ea79cc7.chunk.js": "/Personal-website/static/js/787.3ea79cc7.chunk.js",
-    "static/media/IMG_2422.jpg": "/Personal-website/static/media/IMG_2422.f56b36e07da259a5d6a6.jpg",
-    "static/media/IMG_2414.jpg": "/Personal-website/static/media/IMG_2414.1f485d8bfaead4fe722b.jpg",
-    "static/media/Tree.jpg": "/Personal-website/static/media/Tree.a13eb5a88dbf419a4b1b.jpg",
-    "static/media/wok.jpeg": "/Personal-website/static/media/wok.6c1d2d5862494f59a5ad.jpeg",
     "static/media/The_bear.jpg": "/Personal-website/static/media/The_bear.1b2b8a934670896a137a.jpg",
+    "static/media/IMG_2422.jpg": "/Personal-website/static/media/IMG_2422.adff76cabcec05507a69.jpg",
+    "static/media/IMG_2414.jpg": "/Personal-website/static/media/IMG_2414.51c1d50ecc132c4dd6eb.jpg",
     "static/media/doggie.ico": "/Personal-website/static/media/doggie.a1c14872fa4553aadd3c.ico",
     "static/media/Liad_showcase2.jpg": "/Personal-website/static/media/Liad_showcase2.996a3ce6c6e83e58c05b.jpg",
+    "static/media/Tree.jpg": "/Personal-website/static/media/Tree.a3cef13f21e6265f5173.jpg",
+    "static/media/wok.jpg": "/Personal-website/static/media/wok.764278b989a1c1943ff8.jpg",
     "static/media/pie.jpeg": "/Personal-website/static/media/pie.70258c847ca353b44d08.jpeg",
     "static/media/QA Resume Liad 923.pdf": "/Personal-website/static/media/QA Resume Liad 923.005ac6f9bac483a68e46.pdf",
     "static/media/adventure.jpg": "/Personal-website/static/media/adventure.41fe6f2a3406bb222ac5.jpg",
@@ -300,7 +300,7 @@
     "static/media/typescript-cream.png": "/Personal-website/static/media/typescript-cream.c63ec7c1b34ef2861768.png",
     "index.html": "/Personal-website/index.html",
     "main.e6c13ad2.css.map": "/Personal-website/static/css/main.e6c13ad2.css.map",
-    "main.aaa0b6b3.js.map": "/Personal-website/static/js/main.aaa0b6b3.js.map",
+    "main.1db7f9f9.js.map": "/Personal-website/static/js/main.1db7f9f9.js.map",
     "refractor-core-import.fe1fba10.chunk.js.map": "/Personal-website/static/js/react-syntax-highlighter/refractor-core-import.fe1fba10.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.82d4c8e4.chunk.js.map": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_abap.82d4c8e4.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abnf.0f0a7262.chunk.js.map": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_abnf.0f0a7262.chunk.js.map",
@@ -583,6 +583,6 @@
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.aaa0b6b3.js"
+    "static/js/main.1db7f9f9.js"
   ]
 }
