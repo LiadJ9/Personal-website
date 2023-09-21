@@ -22,7 +22,6 @@ export const MadePossible = ({ isMobile }: MadeProps) => (
         flexDirection: "column",
         color: Colors.SilkCaramel,
         fontSize: "large",
-        fontFamily: "Poppins",
         alignItems: "center",
       }}
     >

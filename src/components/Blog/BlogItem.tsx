@@ -54,7 +54,6 @@ export const BlogItem = ({
       <div style={InnerBlogpostContainerStyle}>
         <animated.h1
           style={{
-            fontFamily: "Poppins",
             textAlign: "center",
             color: Colors.DarkBrown,
             ...titleSpring,
@@ -64,7 +63,6 @@ export const BlogItem = ({
         </animated.h1>
         <p
           style={{
-            fontFamily: "Poppins",
             fontWeight: "300",
             color: Colors.DarkBrown,
           }}

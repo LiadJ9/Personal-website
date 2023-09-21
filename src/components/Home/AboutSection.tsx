@@ -23,7 +23,6 @@ export const AboutSection = ({ isMobile }: AboutProps) => (
         marginTop: "3vh",
         color: Colors.SilkBrown,
         fontSize: isMobile ? "x-large" : "xx-large",
-        fontFamily: "Poppins",
         maxWidth: isMobile ? "90%" : "45%",
       }}
     >

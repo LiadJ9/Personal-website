@@ -52,7 +52,7 @@ export const AboutMe = ({ isMobile }: AboutProps) => {
 
   return (
     <div style={PageStyle}>
-      <PageHeader name="About" />
+      <PageHeader>About</PageHeader>
       <div
         style={{
           display: "flex",

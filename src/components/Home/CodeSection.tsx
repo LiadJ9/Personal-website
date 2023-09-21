@@ -32,14 +32,13 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
           display: "flex",
           flexDirection: "column",
           marginLeft: "2vh",
-          marginTop: "3vh",
+          marginTop: isMobile ? "3vh" : "",
           color: Colors.SilkBrown,
           fontSize: "xx-large",
-          fontFamily: "Poppins",
           maxWidth: isMobile ? "80%" : "36%",
         }}
       >
-        <p style={{ marginTop: "4vh" }}>Looking for more?</p>
+        <p style={{ marginTop: isMobile ? "4vh" : "0" }}>Looking for more?</p>
         <p style={{ fontSize: 24, textAlign: isMobile ? "center" : "left" }}>
           Here&apos;s an example of one of the components I created.
         </p>
@@ -48,6 +47,7 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
             fontSize: isMobile ? 20 : 25,
             textAlign: isMobile ? "center" : "left",
             paddingRight: "2px",
+            maxWidth: isMobile ? "100%" : "80%",
           }}
         >
           Additionally, the source code for this website and instructions on how
@@ -64,7 +64,7 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
       <div
         style={{
           display: "flex",
-          height: "80%",
+          height: "90%",
           alignSelf: "center",
           justifyContent: "center",
           width: isMobile ? "90%" : "",
@@ -86,14 +86,13 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          maxWidth: isMobile ? "20rem" : "16vh",
+          maxWidth: isMobile ? "20rem" : "17vh",
           marginTop: isMobile ? "2rem" : "13vh",
         }}
       >
         <p
           style={{
             textAlign: "center",
-            fontFamily: "Poppins",
             color: Colors.DarkerBrown,
             fontSize: 16,
           }}
@@ -112,7 +111,6 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
             outline: "none",
             caretColor: Colors.SilkCaramel,
             color: Colors.SilkCaramel,
-            fontFamily: "Poppins",
           }}
           maxLength={2}
           onChange={(num) => {
@@ -128,7 +126,7 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
       <div
         style={{
           display: "flex",
-          height: "80%",
+          height: isMobile ? "80%" : "90%",
           alignSelf: "center",
           backgroundColor: Colors.DarkerBrown,
           justifyContent: "center",
