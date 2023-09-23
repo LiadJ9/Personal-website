@@ -19,6 +19,7 @@ export const CodeSection = ({ isMobile }: CodeProps) => {
   return (
     <div
       style={{
+        paddingTop: isMobile ? "0" : "2vh",
         display: "flex",
         flexDirection: "column",
         backgroundColor: Colors.SilkCaramel,

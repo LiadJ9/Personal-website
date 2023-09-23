@@ -8,7 +8,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout isMobile={isTabletOrMobile} />}>
           <Route index element={<Homepage isMobile={isTabletOrMobile} />} />
           <Route path="/Blog" element={<Blog isMobile={isTabletOrMobile} />} />
           <Route
@@ -23,9 +23,8 @@ const App = () => {
           />
           <Route
             path="/Portfolio"
-            element={
-              <Portfolio isMobile={isTabletOrMobile} />
-            } />
+            element={<Portfolio isMobile={isTabletOrMobile} />}
+          />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

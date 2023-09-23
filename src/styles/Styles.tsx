@@ -5,19 +5,16 @@ export const HeaderStyle: CSS.Properties = {
   backgroundColor: Colors.BlueGray,
   display: "flex",
   flexDirection: "row",
-  justifyContent: "left",
 };
 
 export const LinkStyle: CSS.Properties = {
   textDecoration: "none",
-  color: Colors.Cream,
   transition: "opacity 0.2s",
   justifyContent: "center",
 };
 
 export const HoveredLink: CSS.Properties = {
   textDecoration: "none",
-  color: Colors.Cream,
   transition: "opacity 0.5s",
   opacity: 0.4,
 };
@@ -29,6 +26,11 @@ export const ParagraphStyle: CSS.Properties = {
   fontSize: "large",
   marginBottom: "2vh",
   color: Colors.DarkBrown,
+};
+
+export const DropdownLinkStyle: CSS.Properties = {
+  display: "block",
+  padding: "12px 16px",
 };
 
 // FOOTER STYLES
