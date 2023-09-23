@@ -36,7 +36,6 @@ export const AboutSegment = ({
           fontSize: "xx-large",
           justifyContent: "center",
           alignItems: "center",
-          fontFamily: "Poppins",
           maxWidth: isMobile ? "95%" : "50%",
         }}
       >

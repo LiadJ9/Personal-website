@@ -10,7 +10,7 @@ interface BlogProps {
 
 export const Blog = ({ isMobile }: BlogProps) => (
   <div style={PageStyle}>
-    <PageHeader name="Blogs" />
+    <PageHeader>Blogs</PageHeader>
     <BlogList blogs={blogs} isMobile={isMobile} />
   </div>
 );

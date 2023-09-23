@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Link } from "react-router-dom";
 import { LinkStyle, HoveredLink } from "../styles/Styles";
 
 interface LinkerProps {
   style?: React.CSSProperties;
+  extraStyle?: React.CSSProperties;
   to: string;
-  name: string;
+  children: ReactNode;
 }
 
-export const Linker = ({ to, name, style }: LinkerProps) => {
+export const Linker = ({ to, children, style, extraStyle }: LinkerProps) => {
   const [IsHovered, setIsHovered] = useState<boolean>(false);
   const HandleMouseEnter = () => {
     setIsHovered(true);
@@ -20,12 +21,12 @@ export const Linker = ({ to, name, style }: LinkerProps) => {
   return (
     <div style={{ textAlign: "center", ...style }}>
       <Link
-        style={IsHovered ? HoveredLink : LinkStyle}
+        style={{ ...(IsHovered ? HoveredLink : LinkStyle), ...extraStyle }}
         onMouseEnter={HandleMouseEnter}
         onMouseLeave={HandleMouseLeave}
         to={to}
       >
-        {name}
+        {children}
       </Link>
     </div>
   );

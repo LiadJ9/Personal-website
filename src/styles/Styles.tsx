@@ -5,33 +5,32 @@ export const HeaderStyle: CSS.Properties = {
   backgroundColor: Colors.BlueGray,
   display: "flex",
   flexDirection: "row",
-  justifyContent: "left",
 };
 
 export const LinkStyle: CSS.Properties = {
   textDecoration: "none",
-  color: Colors.Cream,
   transition: "opacity 0.2s",
-  fontFamily: "Poppins",
   justifyContent: "center",
 };
 
 export const HoveredLink: CSS.Properties = {
   textDecoration: "none",
-  color: Colors.Cream,
   transition: "opacity 0.5s",
   opacity: 0.4,
-  fontFamily: "Poppins",
 };
 
 export const ParagraphStyle: CSS.Properties = {
   textAlign: "left",
-  fontFamily: "Poppins",
   wordSpacing: "length",
   lineHeight: 1.6,
   fontSize: "large",
   marginBottom: "2vh",
   color: Colors.DarkBrown,
+};
+
+export const DropdownLinkStyle: CSS.Properties = {
+  display: "block",
+  padding: "12px 16px",
 };
 
 // FOOTER STYLES
@@ -95,7 +94,6 @@ export const Fo_o_Fo_ContainerStyle: CSS.Properties = {
 };
 
 export const Fo_o_Fo_ErrorStyle: CSS.Properties = {
-  fontFamily: "Poppins",
   marginBottom: "10vh",
   color: Colors.DarkBrown,
   fontSize: "x-large",
@@ -121,7 +119,6 @@ export const SelfSectionTextStyle: CSS.Properties = {
   marginLeft: "2vh",
   color: Colors.SilkCaramel,
   fontSize: "xx-large",
-  fontFamily: "Poppins",
   maxWidth: "45%",
 };
 
@@ -130,7 +127,6 @@ export const SelfMobileTextStyle: CSS.Properties = {
   flexDirection: "column",
   color: Colors.SilkCaramel,
   fontSize: "xx-large",
-  fontFamily: "Poppins",
   maxWidth: "100%",
   textAlign: "center",
 };

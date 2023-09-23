@@ -11,7 +11,7 @@ import { Colors } from "../styles/Colors";
 
 export const Footer = () => (
   <div style={FooterStyle}>
-    <p style={{ fontFamily: "Poppins", color: Colors.Cream, marginLeft: 5 }}>
+    <p style={{  color: Colors.Cream, marginLeft: 5 }}>
       Created by LiadJ9
     </p>
     <div style={InnerFooterStyle}>

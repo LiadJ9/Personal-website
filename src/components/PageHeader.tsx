@@ -1,12 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { animated, useSpring } from "@react-spring/web";
 import { Colors } from "../styles/Colors";
 
 interface NameProps {
-  name: string;
+  children: ReactNode;
+  style?: React.CSSProperties;
 }
 
-export const PageHeader = ({ name }: NameProps) => {
+export const PageHeader = ({ children, style }: NameProps) => {
   const headerSpring = useSpring({
     from: { y: -50 },
     to: { y: 0 },
@@ -14,13 +15,13 @@ export const PageHeader = ({ name }: NameProps) => {
   return (
     <animated.p
       style={{
-        fontFamily: "Poppins",
         fontSize: 40,
         color: Colors.Cream,
         ...headerSpring,
+        ...style,
       }}
     >
-      {name}
+      {children}
     </animated.p>
   );
 };
