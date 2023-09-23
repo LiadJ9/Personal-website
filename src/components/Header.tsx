@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Linker, RotatingImage } from "../components";
 import { UilBars } from "@iconscout/react-unicons";
 import { DropdownLinkStyle, HeaderStyle } from "../styles/Styles";
@@ -85,7 +85,7 @@ export const Header = ({ isMobile }: HeaderProps) => {
               }}
             >
               <UilBars
-                style={{ marginTop: "10px" }}
+                style={{ marginTop: "1.7vh", marginLeft: "1vh" }}
                 size={40}
                 color={Colors.SilkCaramel}
               />
@@ -166,7 +166,7 @@ export const Header = ({ isMobile }: HeaderProps) => {
       </div>
 
       {isMobile && (
-        <div style={{ marginRight: "3%" }}>
+        <div style={{ marginRight: "3%", marginTop: "1vh" }}>
           <RotatingImage
             style={{}}
             width={55}
