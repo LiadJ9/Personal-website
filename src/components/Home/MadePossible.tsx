@@ -79,7 +79,9 @@ export const MadePossible = ({ isMobile }: MadeProps) => (
             : {}
         }
       >
-        <p style={{ margin: 0 }}>Icons provided by IconScout/React-unicons</p>
+        <p style={{ margin: 0 }}>
+          Icons provided by IconScout/React-unicons | React-Icons
+        </p>
         <p style={{ margin: 0 }}>Animations made using React-Spring</p>
         <p style={{ margin: 0 }}>
           Code Blocks Component is Provided by react-code-blocks{" "}

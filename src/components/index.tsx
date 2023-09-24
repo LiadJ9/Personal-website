@@ -22,8 +22,9 @@ export * from "./Home/homeComponents/Dots";
 export * from "./Home/homeComponents/Space";
 export * from "./Home/SelfSection";
 export * from "./Home/AboutSection";
-export * from "./Home/MadePossible";
+export * from "./Home/FamiliarWithSection";
 export * from "./Home/CodeSection";
+export * from "./Home/MadePossible";
 //About Components
 export * from "./About/AboutSegment";
 //Portfolio Components

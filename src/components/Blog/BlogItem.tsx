@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { animated, useSpring } from "@react-spring/web";
 import { Colors } from "../../styles/Colors";
 import {
@@ -6,6 +6,7 @@ import {
   OuterBlogpostContainerStyle,
   ParagraphStyle,
 } from "../../styles/Styles";
+import { isMobileContext } from "../../helpers/helpers";
 
 interface BlogItemProps {
   title: string;
@@ -16,7 +17,6 @@ interface BlogItemProps {
   content5?: string;
   img?: string;
   timestamp: string;
-  isMobile: boolean;
 }
 
 export const BlogItem = ({
@@ -28,8 +28,8 @@ export const BlogItem = ({
   content5,
   img,
   timestamp,
-  isMobile,
 }: BlogItemProps) => {
+  const isMobile = useContext(isMobileContext);
   const titleSpring = useSpring({
     from: { x: -50, opacity: 0 },
     to: { x: 0, opacity: 1 },
