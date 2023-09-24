@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { PageStyle } from "../styles/Styles";
 import { AboutSegment, PageHeader } from "../components";
 import { segmentType } from "../consts/types";
-interface AboutProps {
-  isMobile: boolean;
-}
+import { isMobileContext } from "../helpers/helpers";
 
-export const AboutMe = ({ isMobile }: AboutProps) => {
+export const AboutMe = () => {
+  const isMobile = useContext(isMobileContext);
   const segment1: segmentType = {
     header: "More about me",
     text: "Great at being excited about new things and overcoming challenges. I love coming up with ideas and meeting new people that think alike.",

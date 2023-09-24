@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, createContext } from "react";
 
 // random length (dots component)
 export const ranRem = (low?: boolean) => {
@@ -55,3 +55,5 @@ export const useComponentVisible = (
 
   return { ref, isVisible, setIsComponentVisible };
 };
+
+export const isMobileContext = createContext(false);

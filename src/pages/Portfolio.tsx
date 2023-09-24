@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { PageHeader } from "../components";
 import { CalandarDiv } from "../components";
 import { Colors } from "../styles/Colors";
+import { isMobileContext } from "../helpers/helpers";
 
-interface PortfolioProps {
-  isMobile: boolean;
-}
-
-export const Portfolio = ({ isMobile }: PortfolioProps) => {
+export const Portfolio = () => {
+  const isMobile = useContext(isMobileContext);
   return (
     <div
       style={{
