@@ -15,8 +15,8 @@ export const Homepage = () => {
     <div style={PageStyle}>
       <SelfSection isMobile={isMobile} />
       <AboutSection isMobile={isMobile} />
-      <FamiliarSection isMobile={isMobile} />
       <CodeSection isMobile={isMobile} />
+      <FamiliarSection isMobile={isMobile} />
       <MadePossible isMobile={isMobile} />
     </div>
   );
