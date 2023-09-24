@@ -9,6 +9,9 @@ export * from "./ImageComponents/FloatingImage";
 export * from "./ImageComponents/RotatingImage";
 export * from "./ImageComponents/PopUpImage";
 export * from "./ImageComponents/HiddenComponent";
+//Header  components
+export * from "./Header/BurgerDropdown";
+export * from "./Header/LinkList";
 //Footer scroll 2 top component
 export * from "./ScrollToTop";
 //Blog Components
@@ -23,6 +26,5 @@ export * from "./Home/MadePossible";
 export * from "./Home/CodeSection";
 //About Components
 export * from "./About/AboutSegment";
-
 //Portfolio Components
 export * from "./Portfolio/CalandarDiv";

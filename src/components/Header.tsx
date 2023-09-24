@@ -1,50 +1,13 @@
-import React, { useEffect } from "react";
-import { Linker, RotatingImage } from "../components";
-import { UilBars } from "@iconscout/react-unicons";
-import { DropdownLinkStyle, HeaderStyle } from "../styles/Styles";
+import React from "react";
+import { RotatingImage, BurgerDropdown, LinkList } from "../components";
+import { HeaderStyle } from "../styles/Styles";
 import { Colors } from "../styles/Colors";
-import { useComponentVisible } from "../helpers/helpers";
-import { animated, useSpring } from "@react-spring/web";
 
 interface HeaderProps {
   isMobile: boolean;
 }
 
 export const Header = ({ isMobile }: HeaderProps) => {
-  const [BurgerSpring, BurgerApi] = useSpring(() => ({
-    opacity: 0,
-    height: 0,
-    config: { precision: 0.0001 },
-  }));
-
-  const HandleOpen = () => {
-    if (BurgerSpring.opacity)
-      BurgerApi.start({
-        from: { height: 0, opacity: 0 },
-        to: { height: 200, opacity: 1 },
-      });
-  };
-
-  const HandleClose = () => {
-    BurgerApi.start({
-      from: { height: 200, opacity: 1 },
-      to: [{ height: 0, opacity: 0 }],
-    });
-  };
-  const { ref, isVisible, setIsComponentVisible } = useComponentVisible(
-    false,
-    300,
-    HandleClose
-  );
-
-  useEffect(() => {
-    if (isVisible === true) {
-      HandleOpen();
-    } else {
-      HandleClose();
-    }
-  }, [isVisible]);
-
   return (
     <div
       style={{
@@ -68,100 +31,9 @@ export const Header = ({ isMobile }: HeaderProps) => {
           />
         )}
         {isMobile ? (
-          <>
-            <div
-              style={{
-                position: "relative",
-                display: "inline-block",
-              }}
-              ref={ref}
-              onClick={() => {
-                if (isVisible === true) {
-                  HandleClose();
-                  setIsComponentVisible(!isVisible);
-                } else {
-                  setIsComponentVisible(!isVisible);
-                }
-              }}
-            >
-              <UilBars
-                style={{ marginTop: "1.7vh", marginLeft: "1vh" }}
-                size={40}
-                color={Colors.SilkCaramel}
-              />
-              <animated.div
-                style={{
-                  position: "absolute",
-                  backgroundColor: Colors.DarkerBrown,
-                  borderRadius: 6,
-                  pointerEvents: isVisible ? "auto" : "none",
-                  ...BurgerSpring,
-                }}
-              >
-                <Linker
-                  style={DropdownLinkStyle}
-                  extraStyle={{ color: Colors.VoguePurple }}
-                  to="/"
-                >
-                  Home
-                </Linker>
-                <Linker
-                  style={DropdownLinkStyle}
-                  extraStyle={{ color: Colors.VoguePurple }}
-                  to="/About"
-                >
-                  About
-                </Linker>
-                <Linker
-                  style={DropdownLinkStyle}
-                  extraStyle={{ color: Colors.VoguePurple }}
-                  to="/Blog"
-                >
-                  Blog
-                </Linker>
-                <Linker
-                  style={DropdownLinkStyle}
-                  extraStyle={{ color: Colors.VoguePurple }}
-                  to="/Portfolio"
-                >
-                  Portfolio
-                </Linker>
-              </animated.div>
-            </div>
-          </>
+          <BurgerDropdown />
         ) : (
-          <>
-            <Linker
-              style={{ margin: "10%" }}
-              extraStyle={{ color: Colors.Cream }}
-              to="/"
-            >
-              Home
-            </Linker>
-            <Linker
-              style={{
-                margin: "10%",
-              }}
-              extraStyle={{ color: Colors.Cream }}
-              to="/About"
-            >
-              About
-            </Linker>
-            <Linker
-              style={{ margin: "10%" }}
-              extraStyle={{ color: Colors.Cream }}
-              to="/Blog"
-            >
-              Blog
-            </Linker>
-            <Linker
-              style={{ margin: "10%" }}
-              extraStyle={{ color: Colors.Cream }}
-              to="/Portfolio"
-            >
-              Portfolio
-            </Linker>
-          </>
+          <LinkList Color={Colors.Cream} style={{ margin: "10%" }} />
         )}
       </div>
 

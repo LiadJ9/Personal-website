@@ -38,6 +38,8 @@ export const Portfolio = ({ isMobile }: PortfolioProps) => {
             borderRadius: 7,
             maxWidth: isMobile ? "98%" : "27%",
             marginLeft: isMobile ? "0" : "1vh",
+            marginTop: isMobile ? "3vh" : "",
+            paddingBottom: isMobile ? "1vh" : "",
           }}
         >
           <p style={{ color: Colors.SilkBrown, fontSize: 30, marginBottom: 0 }}>
