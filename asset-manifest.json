@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Personal-website/static/css/main.3e4b98ed.css",
-    "main.js": "/Personal-website/static/js/main.2f031a59.js",
+    "main.js": "/Personal-website/static/js/main.5dc07f33.js",
     "react-syntax-highlighter/refractor-core-import.js": "/Personal-website/static/js/react-syntax-highlighter/refractor-core-import.fe1fba10.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_abap.82d4c8e4.chunk.js",
     "react-syntax-highlighter_languages_refractor_abnf.js": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_abnf.0f0a7262.chunk.js",
@@ -287,9 +287,9 @@
     "static/media/doggie.ico": "/Personal-website/static/media/doggie.a1c14872fa4553aadd3c.ico",
     "static/media/Liad_showcase2.jpg": "/Personal-website/static/media/Liad_showcase2.996a3ce6c6e83e58c05b.jpg",
     "static/media/Tree.jpg": "/Personal-website/static/media/Tree.a3cef13f21e6265f5173.jpg",
+    "static/media/Liad Resume 9-27.pdf": "/Personal-website/static/media/Liad Resume 9-27.721842b8f0cb03d054f5.pdf",
     "static/media/wok.jpg": "/Personal-website/static/media/wok.764278b989a1c1943ff8.jpg",
     "static/media/pie.jpeg": "/Personal-website/static/media/pie.70258c847ca353b44d08.jpeg",
-    "static/media/QA Resume Liad 923.pdf": "/Personal-website/static/media/QA Resume Liad 923.005ac6f9bac483a68e46.pdf",
     "static/media/adventure.jpg": "/Personal-website/static/media/adventure.41fe6f2a3406bb222ac5.jpg",
     "static/media/react-cream.png": "/Personal-website/static/media/react-cream.4d307de465ef84adc8d2.png",
     "static/media/star.png": "/Personal-website/static/media/star.5a2be794bdd0a17afede.png",
@@ -300,7 +300,7 @@
     "static/media/typescript-cream.png": "/Personal-website/static/media/typescript-cream.c63ec7c1b34ef2861768.png",
     "index.html": "/Personal-website/index.html",
     "main.3e4b98ed.css.map": "/Personal-website/static/css/main.3e4b98ed.css.map",
-    "main.2f031a59.js.map": "/Personal-website/static/js/main.2f031a59.js.map",
+    "main.5dc07f33.js.map": "/Personal-website/static/js/main.5dc07f33.js.map",
     "refractor-core-import.fe1fba10.chunk.js.map": "/Personal-website/static/js/react-syntax-highlighter/refractor-core-import.fe1fba10.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.82d4c8e4.chunk.js.map": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_abap.82d4c8e4.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abnf.0f0a7262.chunk.js.map": "/Personal-website/static/js/react-syntax-highlighter_languages_refractor_abnf.0f0a7262.chunk.js.map",
@@ -583,6 +583,6 @@
   },
   "entrypoints": [
     "static/css/main.3e4b98ed.css",
-    "static/js/main.2f031a59.js"
+    "static/js/main.5dc07f33.js"
   ]
 }
